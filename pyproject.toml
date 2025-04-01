@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "deepcad"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+cython = "^3.0.12"
+h5py = "^3.13.0"
+joblib = "^1.4.2"
+matplotlib = "^3.10.1"
+numpy = "^2.2.4"
+pillow = "^11.1.0"
+plyfile = "^1.1"
+scipy = "^1.15.2"
+tensorboardx = "^2.6.2.2"
+torch = "^2.6.0"
+tqdm = "^4.67.1"
+trimesh = "^4.6.6"
+scikit-learn = "^1.6.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
