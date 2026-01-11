@@ -124,7 +124,7 @@ We provide scripts to visualize CAD models and export the results to `.step` fil
 ```bash
 $ cd utils
 $ python show.py --src {source folder} # visualize with opencascade
-$ python export2step.py --src {source folder} # export to step format
+$ python export2step.py --src {source folder} --num -1 --form json # export to step format
 ```
 Script to create CAD modeling sequence in Onshape according to generated outputs: TBA.
 

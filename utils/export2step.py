@@ -24,7 +24,7 @@ args = parser.parse_args()
 
 src_dir = args.src
 print(src_dir)
-out_paths = sorted(glob.glob(os.path.join(src_dir, "*.{}".format(args.form))))
+out_paths = sorted(glob.glob(os.path.join(src_dir, "*/*.{}".format(args.form))))
 if args.num != -1:
     out_paths = out_paths[args.idx:args.idx+args.num]
 save_dir = args.src + "_step" if args.outputs is None else args.outputs
@@ -56,5 +56,8 @@ for path in out_paths:
     
     name = path.split("/")[-1].split(".")[0]
     save_path = os.path.join(save_dir, name + ".step")
-    write_step_file(out_shape, save_path)
-
+    try:
+        write_step_file(out_shape, save_path)
+    except Exception as e:
+        print("export failed.")
+        continue
